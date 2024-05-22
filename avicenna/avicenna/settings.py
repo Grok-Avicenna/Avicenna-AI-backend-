@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import sys
+
+# sys.path.append(r'C:\Users\moziz\Desktop\Avicenna-AI\ucc-grok\avicenna')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'forum',
+    'management',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +74,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'avicenna.wsgi.application'
+NO_AVATAR = '/avatars/no_avatar.png'
+AUTH_USER_MODEL = 'management.User'
 
 
 # Database
