@@ -15,8 +15,13 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
 
 
-class ChangeAvatarSerializer(serializers.Serializer):
 
-    """Change avatar serializer"""
 
-    avatar = serializers.ImageField()
+
+class ChangePasswordSerializer(serializers.Serializer):
+
+    """Change password serializer"""
+
+    password = serializers.CharField(write_only=True)
+    new_password = serializers.CharField(write_only=True)
+    confirm_password = serializers.CharField(write_only=True)
